@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>RSS一覧</title>
+  </head>
+  <body>
+    <h2>RSS一覧</h2>
+    <% @rsspages.each do |page| %>
+    <li><%= page.title %>:<%= page.url%></li>
+    <% end %>
+  </body>
+</html>

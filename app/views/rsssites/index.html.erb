@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>RSSﾖﾑｩ!</title>
+  </head>
+  <body>
+    <h2>サイト一覧</h2>
+    <%= form_for @rsssite,:url => {:action =>:create} do |f| %>
+    <p>サイト名</p>
+    <%= f.text_field :name %>
+    <p>URL</p>
+    <%= f.text_field :url %>
+    <%= f.submit%>
+    <% end %>
+    <% @rsssites.each do |site| %>
+    <li><%= site.name %>:<%= site.url%></li>
+    <% end %>
+  </body>
+</html>
