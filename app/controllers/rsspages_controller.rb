@@ -1,6 +1,6 @@
 class RsspagesController < ApplicationController
   def show
-    @rsspages = Rsspage.all
+    @rsspages = Rsspage.all.order("created_at desc")
     #view
     render :index
   end
