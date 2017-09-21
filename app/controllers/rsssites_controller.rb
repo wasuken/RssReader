@@ -1,6 +1,7 @@
 class RsssitesController < ApplicationController
   def create
     Rsssite.create(rsssite_params)
+    redirect_to :action => "show"
   end
   def show
     @rsssites = Rsssite.all
