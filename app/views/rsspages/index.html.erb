@@ -4,10 +4,16 @@
   </head>
   <body>
     <h2>RSS一覧</h2>
-    <% @rsspages.each do |page| %>
-    <li>
-      <a href="<%= page.url%>"><%= page.title %></a>
-    </li>
+    <% @ght = group_hash %>
+    <% @ght.keys.each do |key| %>
+      <h2><%= key %></h2>
+      <ul>
+        <% @ght[key].each do |page| %>
+          <li>
+            <a href="<%= page.url%>"><%= page.title %></a>
+          </li>
+        <% end  %>
+      </ul>
     <% end %>
   </body>
 </html>

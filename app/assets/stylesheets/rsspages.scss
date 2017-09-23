@@ -1,3 +1,36 @@
-// Place all the styles related to the rsspages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ul {
+    border: solid 2px #00b03f;
+    padding: 0.5em;
+    position: relative;
+    margin-top: 2em;
+    width:1000px;
+    height:300px;
+    overflow:auto;
+}
+ul li {
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.4em;
+    border-bottom: dashed 1px silver;
+    list-style-type: none!important;
+}
+ul li:last-of-type{
+    border-bottom: none;
+}
+ul li:before {/*リスト内のアイコン*/
+    font-family: FontAwesome;
+    content: "\f138";/*アイコン種類*/
+    position: absolute;
+    left : 0.5em; /*左端からのアイコンまで*/
+    color: #02be10; /*アイコン色*/
+}
+ul li:after {/*タイトルタブ*/
+    background: #ffb03f;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: -2px;
+    bottom: 100%;
+    padding: 1px 7px;
+    content: "POINT";/*タブの文字*/
+    letter-spacing: 0.05em;/*字間*/
+}

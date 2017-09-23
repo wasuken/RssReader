@@ -20,7 +20,7 @@ class Rsssite < ActiveRecord::Base
             title = Sanitize.clean(item.title)
             Rsspage.where(url: link)
               .first_or_create(title: title,url: link,
-                               description: desc,
+                               description: desc,rsssite_id: self.id,
                            created_at: item.date,updated_at: item.date)
           end
         end
