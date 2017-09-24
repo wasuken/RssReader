@@ -10,6 +10,9 @@ module RsspagesHelper
         ht.store(i.name,[i])
       end
     }
+    ht.keys.each do |key|
+      ht[key].sort!
+    end
     ht
   end
 end
