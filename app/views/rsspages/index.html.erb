@@ -5,15 +5,19 @@
   <body>
     <h2>RSS一覧</h2>
     <% @ght = group_hash %>
-    <% @ght.keys.each do |key| %>
-      <h2><%= key %></h2>
-      <ul>
-        <% @ght[key].each do |page| %>
-          <li>
-            <a href="<%= page.url%>"><%= page.title %></a>
-          </li>
-        <% end  %>
-      </ul>
-    <% end %>
+    <section class="content-gallery scroll-bar">
+      <% @ght.keys.each do |key| %>
+      <section class="content-gallery-card">
+        <h2><%= key %></h2>
+        <ul class="card-pages">
+          <% @ght[key].each do |page| %>
+            <li class="card-page-link">
+              <a href="<%= page.url%>"><%= page.title %></a>
+            </li>
+          <% end  %>
+        </ul>
+      </section>
+      <% end %>
+    </section>
   </body>
 </html>

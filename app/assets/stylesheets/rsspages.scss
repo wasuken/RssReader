@@ -1,29 +1,29 @@
-ul {
+ul.card-pages {
     border: solid 2px #00b03f;
     padding: 0.5em;
     position: relative;
     margin-top: 2em;
-    width:1000px;
+    width:700px;
     height:300px;
     overflow:auto;
 }
-ul li {
+ul.card-pages li.card-page-link {
     line-height: 1.5;
     padding: 0.5em 0 0.5em 1.4em;
     border-bottom: dashed 1px silver;
     list-style-type: none!important;
 }
-ul li:last-of-type{
+ul.card-pages li.card-page-link:last-of-type{
     border-bottom: none;
 }
-ul li:before {/*リスト内のアイコン*/
+ul.card-pages li.card-page-link:before {/*リスト内のアイコン*/
     font-family: FontAwesome;
     content: "\f138";/*アイコン種類*/
     position: absolute;
     left : 0.5em; /*左端からのアイコンまで*/
     color: #02be10; /*アイコン色*/
 }
-ul li:after {/*タイトルタブ*/
+ul.card-pages li.card-page-link:after {/*タイトルタブ*/
     background: #ffb03f;
     color: #fff;
     font-weight: bold;
@@ -34,3 +34,21 @@ ul li:after {/*タイトルタブ*/
     content: "POINT";/*タブの文字*/
     letter-spacing: 0.05em;/*字間*/
 }
+
+.content-gallery {
+  display: -ms-flexbox;
+  /*--- IE10 ---*/
+  display: -webkit-flex;
+  /*--- safari（PC）用 ---*/
+  display: flex;
+  padding: 20px 0;
+  overflow-x: scroll;
+}
+
+.content-gallery .content-gallery-card {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #FFF;
+  border: solid 1px #0B2;
+}
+

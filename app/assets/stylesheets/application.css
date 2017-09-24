@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+.list-nav00{
+    list-style:none;
+    width: 100%;                /* 横幅100%　*/
+    height: 140px;              /* 縦幅140px */
+    //width:980px;
+    margin:0 auto;
+}
+.list-nav00:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.list-nav00 li{
+    float:left;
+    width:140px; //ナビの幅980px ÷ ナビの数 7
+}
+.list-nav00 a{
+    display:block;
+    line-height:30px;
+    height:30px;
+    text-align:center;
+    background:#000;
+    color:#fff;
+    border-right:1px solid red;
+}
+.list-nav00 li:first-child a{
+    border-left:1px solid red;
+}
