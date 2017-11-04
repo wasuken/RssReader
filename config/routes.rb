@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   post "/rsssites/add/" => "rsssites#create"
   get "/rsssites/show/" => "rsssites#show"
   get "/rsspages/show" => "rsspages#show"
+  get "/rsssites/" => "rsssites#show"
+  get "/rsspages/" => "rsspages#show"
   get "/rsspages/getrsspages" => "rsspages#get_rsspages"
   
   # See how all your routes lay out with "rake routes".
