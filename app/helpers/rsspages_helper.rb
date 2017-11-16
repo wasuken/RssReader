@@ -12,6 +12,7 @@ module RsspagesHelper
     }
     ht.keys.each do |key|
       ht[key].sort!
+      ht[key].reverse!
     end
     ht
   end
