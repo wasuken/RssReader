@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get "/rsspages/show" => "rsspages#show"
   get "/rsssites/" => "rsssites#show"
   get "/rsspages/" => "rsspages#show"
+  get "/rsspages/json" => "rsspages#json"
   get "/rsspages/getrsspages" => "rsspages#get_rsspages"
-  
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

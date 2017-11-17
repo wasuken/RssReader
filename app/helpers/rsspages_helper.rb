@@ -1,5 +1,5 @@
 module RsspagesHelper
-  def group_hash
+  def rss_page_group_hash
     ht = Hash.new([])
     Rsspage.all.joins(:rsssite)
       .select("rsspages.*,rsssites.url as site_url,rsssites.name")

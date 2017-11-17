@@ -4,13 +4,12 @@
   </head>
   <body>
     <h2>RSS一覧</h2>
-    <% @ght = group_hash %>
     <section class="content-gallery scroll-bar">
-      <% @ght.keys.each do |key| %>
+      <% @rsspages.keys.each do |key| %>
       <section class="content-gallery-card">
         <h2><%= key %></h2>
         <ul class="card-pages">
-          <% @ght[key].each do |page| %>
+          <% @rsspages[key].each do |page| %>
             <li class="card-page-link">
               <a href="<%= page.url%>"><%= page.title %></a>
             </li>
