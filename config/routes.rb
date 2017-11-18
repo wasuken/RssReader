@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/rsssites/" => "rsssites#show"
   get "/rsspages/" => "rsspages#show"
   get "/rsspages/json" => "rsspages#json"
+  get "/rsspages/json/:num" => "rsspages#json"
   get "/rsspages/getrsspages" => "rsspages#get_rsspages"
   # See how all your routes lay out with "rake routes".
 

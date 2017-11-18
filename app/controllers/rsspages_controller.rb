@@ -6,11 +6,14 @@ class RsspagesController < ApplicationController
     #view
     render :index
   end
-  def json
+  # 登録されているサイトから各numずつ取得する(default=3)
+  def json()
+    num = params[:num].to_i
+    num ||= 3
     @grphs = view_context.rss_page_group_hash
     @rsspages = []
     @grphs.keys.each do |key|
-      @rsspages.concat(@grphs[key].take(3))
+      @rsspages.concat(@grphs[key].take(num))
     end
     render :json => @rsspages
   end
