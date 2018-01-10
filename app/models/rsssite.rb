@@ -7,9 +7,11 @@ class Rsssite < ActiveRecord::Base
   def get_rss
     begin
       unless self.url.nil?
+        opt = {}
+        opt['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko'
         rss_results = ""
         url = URI.parse(self.url).normalize
-        open(url) do |http|
+        open(url,opt) do |http|
           response = http.read
           rss_results = RSS::Parser.parse(response, false)
           rss_results.items.each do |item|
@@ -25,8 +27,9 @@ class Rsssite < ActiveRecord::Base
           end
         end
       end
-    rescue
+    rescue => e
       p self.url + " error"
+      p e
     end
   end
 end

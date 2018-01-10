@@ -1,5 +1,5 @@
 module RsspagesHelper
-  def rss_page_group_hash
+  def rss_page_group_hash(page_size=10)
     ht = Hash.new([])
     Rsspage.all.joins(:rsssite)
       .select("rsspages.*,rsssites.url as site_url,rsssites.name")
@@ -12,7 +12,8 @@ module RsspagesHelper
     }
     ht.keys.each do |key|
       ht[key].sort!
-      ht[key].reverse!
+      #ht[key].reverse!
+     t[key] = ht[key].take(page_size)
     end
     ht
   end
