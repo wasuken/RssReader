@@ -12,8 +12,7 @@ module RsspagesHelper
     }
     ht.keys.each do |key|
       ht[key].sort!
-      #ht[key].reverse!
-     ht[key] = ht[key].take(page_size)
+      ht[key] = ht[key].take(page_size)
     end
     ht
   end

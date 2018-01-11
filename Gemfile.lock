@@ -64,11 +64,21 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    ansi (1.5.0)
     arel (6.0.4)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.1.0)
+    capybara (2.17.0)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (>= 2.0, < 4.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -81,6 +91,8 @@ GEM
     debug_inspector (0.0.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_girl (4.9.0)
+      activesupport (>= 3.0.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
@@ -112,12 +124,35 @@ GEM
     mini_mime (0.1.4)
     mini_portile2 (2.2.0)
     minitest (5.10.3)
+    minitest-bang (1.0.4)
+      minitest (>= 4.7.5)
+    minitest-capybara (0.8.2)
+      capybara (~> 2.2)
+      minitest (~> 5.0)
+      rake
+    minitest-doc_reporter (0.6.0)
+      ansi
+      minitest (~> 5.0)
+    minitest-line (0.6.4)
+      minitest (~> 5.0)
+    minitest-metadata (0.6.0)
+      minitest (>= 4.7, < 6.0)
+    minitest-rails (2.2.1)
+      minitest (~> 5.7)
+      railties (~> 4.1)
+    minitest-rails-capybara (2.1.2)
+      capybara (~> 2.7)
+      minitest-capybara (~> 0.8)
+      minitest-metadata (~> 0.6)
+      minitest-rails (~> 2.1)
+    minitest-stub_any_instance (1.0.1)
     multi_json (1.12.2)
     multipart-post (2.0.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     nokogumbo (1.4.13)
       nokogiri
+    public_suffix (3.0.1)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -179,6 +214,8 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    xpath (3.0.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
@@ -186,9 +223,17 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  factory_girl
   feedjira
   jbuilder (~> 2.0)
   jquery-rails
+  minitest
+  minitest-bang
+  minitest-doc_reporter
+  minitest-line
+  minitest-rails
+  minitest-rails-capybara
+  minitest-stub_any_instance
   open_jtalk-ruby!
   rails!
   rb-readline
@@ -202,4 +247,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.1

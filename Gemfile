@@ -1,3 +1,4 @@
+# coding: utf-8
 source 'https://rubygems.org'
 
 
@@ -37,6 +38,21 @@ gem 'open_jtalk-ruby', git: 'git://github.com/sunny4381/open_jtalk-ruby.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :test do
+  gem "minitest"
+  gem "minitest-rails"
+  gem "minitest-rails-capybara"
+
+  gem "minitest-doc_reporter"
+
+  gem "minitest-stub_any_instance"
+
+  gem "minitest-bang"
+  gem "minitest-line"
+
+  gem "factory_girl"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

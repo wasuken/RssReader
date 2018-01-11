@@ -1,28 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* RssReader
 
-Things you may want to cover:
+Rssを登録して見やすく表示させたい。
 
-* Ruby version
 
-* System dependencies
+* TODO
 
-* Configuration
+後フィルタとか付けたい。
 
-* Database creation
+よく見る記事からおすすめの記事とか出したい。
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
