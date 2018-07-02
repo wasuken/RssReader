@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/rsspages/json" => "rsspages#json"
   get "/rsspages/json/:num" => "rsspages#json"
   get "/rsspages/getrsspages" => "rsspages#get_rsspages"
+  get "/redirect" => "accesslogs#insert_and_redirect"
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

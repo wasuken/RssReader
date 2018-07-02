@@ -11,7 +11,7 @@
         <ul class="card-pages">
           <% @rsspages[key].each do |page| %>
             <li class="card-page-link">
-              <a href="<%= page.url%>"><%= page.title %></a>
+              <a href="/redirect?url=<%= page.url%>"><%= page.title %></a>
             </li>
           <% end  %>
         </ul>

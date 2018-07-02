@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accesslog_id: 
+  word_id: 
+
+two:
+  accesslog_id: 
+  word_id: 

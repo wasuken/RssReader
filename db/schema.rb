@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170918070012) do
+ActiveRecord::Schema.define(version: 20180701135051) do
+
+  create_table "accesslog_in_words", force: :cascade do |t|
+    t.integer  "accesslog_id"
+    t.integer  "word_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "accesslog_in_words", ["accesslog_id"], name: "index_accesslog_in_words_on_accesslog_id"
+  add_index "accesslog_in_words", ["word_id"], name: "index_accesslog_in_words_on_word_id"
+
+  create_table "accesslogs", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rsspages", force: :cascade do |t|
     t.string   "title"
@@ -27,6 +43,12 @@ ActiveRecord::Schema.define(version: 20170918070012) do
   create_table "rsssites", force: :cascade do |t|
     t.string   "name"
     t.text     "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
