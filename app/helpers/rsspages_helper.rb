@@ -11,10 +11,8 @@ module RsspagesHelper
       end
     }
     ht.keys.each do |key|
-      ht[key].sort!
+      ht[key].sort!{|a,b| b.updated_at <=> a.updated_at}
       ht[key] = ht[key].take(page_size)
-      #ht[key].reverse!
-     ht[key] = ht[key].take(page_size)
     end
     ht
   end
